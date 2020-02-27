@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>My Docs - API - NancyModule.Delete&lt;T&gt;(string, Func&lt;dynamic, Task&lt;T&gt;&gt;, Func&lt;NancyContext, bool&gt;, string) Method</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>My Docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#TypeParameters">Type Parameters</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">                    
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Namespace</li>
+		<li><a href="/api/Nancy">Nancy</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Nancy/NancyModule">NancyModule</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Nancy/NancyModule/47F1B2E0">NancyModule<wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/D24163DA">NancyModule<wbr>(string)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Nancy/NancyModule/FEA35BE4">After</a></li>
+				<li><a href="/api/Nancy/NancyModule/5EEC8883">Before</a></li>
+				<li><a href="/api/Nancy/NancyModule/D3C4BB5F">Context</a></li>
+				<li><a href="/api/Nancy/NancyModule/418921D1">ModelBinderLocator</a></li>
+				<li><a href="/api/Nancy/NancyModule/BA856799">Model<wbr>Validation<wbr>Result</a></li>
+				<li><a href="/api/Nancy/NancyModule/B8C3D57B">ModulePath</a></li>
+				<li><a href="/api/Nancy/NancyModule/53578032">Negotiate</a></li>
+				<li><a href="/api/Nancy/NancyModule/9DA8B435">OnError</a></li>
+				<li><a href="/api/Nancy/NancyModule/32CE7186">Request</a></li>
+				<li><a href="/api/Nancy/NancyModule/EF32A196">Response</a></li>
+				<li><a href="/api/Nancy/NancyModule/43736669">Routes</a></li>
+				<li><a href="/api/Nancy/NancyModule/7994A26D">Session</a></li>
+				<li><a href="/api/Nancy/NancyModule/D2F382F9">Text</a></li>
+				<li><a href="/api/Nancy/NancyModule/278EAB82">ValidatorLocator</a></li>
+				<li><a href="/api/Nancy/NancyModule/9BFFF43C">View</a></li>
+				<li><a href="/api/Nancy/NancyModule/FBB2DDFB">ViewBag</a></li>
+				<li><a href="/api/Nancy/NancyModule/EB1FC93A">ViewFactory</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Nancy/NancyModule/FA69D3D4">AddRoute<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/9F906371">Delete<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/4F8B856C">Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/8D5F39F7">Delete<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/api/Nancy/NancyModule/8D7FF4EC">Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/6C52578E">Delete<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/9B7F3B35">Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/AEA13990">Get<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/6E0FC2CE">Get<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/C0C1D9F5">Get<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/5C1E163D">Get<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/7E1796E9">Get<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/E190BC65">Get<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/0F1FF8CA">Head<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/D3BCE721">Head<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/E0D9A32E">Head<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/9D182DC8">Head<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/B637A965">Head<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/670C3D39">Head<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/6657B209">Options<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/3D9B86EE">Options<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/934188FA">Options<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/271D26E3">Options<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/D206905A">Options<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/EEA4BAE4">Options<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/A6920449">Patch<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/12B86EE0">Patch<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/335590D5">Patch<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/A7E21475">Patch<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/DC8287B4">Patch<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/D91EC09A">Patch<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/25BC2C24">Post<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/811D8DF8">Post<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/B04C920E">Post<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/FAAB069C">Post<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/32EC5B16">Post<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/4F1226F2">Post<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/D299C169">Put<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/A256446C">Put<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/7F4C9B17">Put<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/464778CF">Put<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/47510E7C">Put<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy/NancyModule/C86FA22F">Put<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></li>
+
+
+                    </ul>
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+			<h3><a href="/api/Nancy/NancyModule">NancyModule</a>.</h3>
+	<h1>Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr> <small>Method</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+    Declares a route for DELETE requests.
+    </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Nancy">Nancy</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Nancy/NancyModule">NancyModule</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public virtual void Delete&lt;T&gt;(string path, Func&lt;dynamic, Task&lt;T&gt;&gt; action, Func&lt;NancyContext, bool&gt; condition = null, string name = null)</code></pre>
+
+
+
+
+	<h1 id="TypeParameters">Type Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr id="typeparam-T">
+						<td>T</td>
+						<td>The return type of the <span name="action" class="paramref">action</span></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>path</td>
+						<td>string</td>
+						<td>The path that the route will respond to</td>
+					</tr>
+					<tr>
+						<td>action</td>
+						<td>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr></td>
+						<td>Action that will be invoked when the route it hit</td>
+					</tr>
+					<tr>
+						<td>condition</td>
+						<td>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr></td>
+						<td>A condition to determine if the route can be hit</td>
+					</tr>
+					<tr>
+						<td>name</td>
+						<td>string</td>
+						<td>Name of the route</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

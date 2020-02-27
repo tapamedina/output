@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>My Docs - API - TinyIoCContainer.Register(Type, Func&lt;TinyIoCContainer, NamedParameterOverloads, object&gt;, string) Method</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>My Docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">                    
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Namespace</li>
+		<li><a href="/api/Nancy.TinyIoc">Nancy<wbr>.TinyIoc</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer">TinyIoCContainer</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/A63FDC68">TinyIoCContainer<wbr>()<wbr></a></li>
+			<li class="header">NamedType Members</li>
+				<li><a href="/api/Nancy.TinyIoc/ITinyIoCObjectLifetimeProvider">TinyIoCContainer<wbr>.<wbr>I<wbr>Tiny<wbr>Io<wbr>C<wbr>Object<wbr>Lifetime<wbr>Provider</a></li>
+				<li><a href="/api/Nancy.TinyIoc/MultiRegisterOptions">TinyIoCContainer<wbr>.<wbr>Multi<wbr>Register<wbr>Options</a></li>
+				<li><a href="/api/Nancy.TinyIoc/RegisterOptions">TinyIoCContainer<wbr>.RegisterOptions</a></li>
+				<li><a href="/api/Nancy.TinyIoc/TypeRegistration">TinyIoCContainer<wbr>.TypeRegistration</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/3F565E51">AutoRegister<wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/88DFAC40">AutoRegister<wbr>(Func<wbr>&lt;Type, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/DF5E06EC">AutoRegister<wbr>(<wbr>Duplicate<wbr>Implementation<wbr>Actions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/967E1613">AutoRegister<wbr>(<wbr>Duplicate<wbr>Implementation<wbr>Actions, <wbr>Func<wbr>&lt;Type, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/35EFBFCD">AutoRegister<wbr>(IEnumerable<wbr>&lt;Assembly&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/BF6F31FB">AutoRegister<wbr>(IEnumerable<wbr>&lt;Assembly&gt;<wbr>, <wbr>Func<wbr>&lt;Type, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/03288F10">AutoRegister<wbr>(IEnumerable<wbr>&lt;Assembly&gt;<wbr>, <wbr>Duplicate<wbr>Implementation<wbr>Actions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/11C4DF73">AutoRegister<wbr>(IEnumerable<wbr>&lt;Assembly&gt;<wbr>, <wbr>Duplicate<wbr>Implementation<wbr>Actions, <wbr>Func<wbr>&lt;Type, <wbr>bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/5C488BC2">BuildUp<wbr>(object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/D649FC0E">BuildUp<wbr>(object, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/9103E444">CanResolve<wbr>(Type)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/72A4920E">CanResolve<wbr>(Type, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/A40BA7E3">CanResolve<wbr>(Type, <wbr>string, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/333D5AD4">CanResolve<wbr>(Type, <wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/0972AB90">CanResolve<wbr>(Type, <wbr>string, <wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/AF560B2C">CanResolve<wbr>(Type, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/CD00E32E">CanResolve<wbr>(Type, <wbr>string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/022D2146">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/8DCFFE93">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/6B43EB09">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/7F9F7168">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/2140D939">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(<wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/82C55711">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/9BC2568A">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(<wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/D00951F3">CanResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/64090677">Dispose<wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/6098CC5B">GetChildContainer<wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/CF69C8C0">Register<wbr>(Type)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/803ECA68">Register<wbr>(Type, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/0A91E658">Register<wbr>(Type, <wbr>Type)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/F7DAEAFC">Register<wbr>(Type, <wbr>Type, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/86984A6E">Register<wbr>(Type, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/16D6DA6F">Register<wbr>(Type, <wbr>object, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/F17C6AFA">Register<wbr>(Type, <wbr>Type, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/6203A7FF">Register<wbr>(Type, <wbr>Type, <wbr>object, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/1009C15F">Register<wbr>(Type, <wbr>Func<wbr>&lt;<wbr>Tiny<wbr>Io<wbr>C<wbr>Container, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>object&gt;<wbr>)<wbr></a></li>
+				<li class="selected"><a href="/api/Nancy.TinyIoc/TinyIoCContainer/544B9343">Register<wbr>(Type, <wbr>Func<wbr>&lt;<wbr>Tiny<wbr>Io<wbr>C<wbr>Container, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>object&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/0D1EF4CC">Register<wbr>&lt;RegisterType&gt;<wbr><wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/8B4BFE2E">Register<wbr>&lt;RegisterType&gt;<wbr><wbr>(string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/B74FFD55">Register<wbr>&lt;RegisterType, <wbr>Register<wbr>Implementation&gt;<wbr><wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/79FF3607">Register<wbr>&lt;RegisterType, <wbr>Register<wbr>Implementation&gt;<wbr><wbr>(string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/37A64244">Register<wbr>&lt;RegisterType&gt;<wbr><wbr>(RegisterType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/04DCD045">Register<wbr>&lt;RegisterType&gt;<wbr><wbr>(RegisterType, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/D8E5CDDB">Register<wbr>&lt;RegisterType, <wbr>Register<wbr>Implementation&gt;<wbr><wbr>(<wbr>Register<wbr>Implementation)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/5F001144">Register<wbr>&lt;RegisterType, <wbr>Register<wbr>Implementation&gt;<wbr><wbr>(<wbr>Register<wbr>Implementation, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/C982D9AD">Register<wbr>&lt;RegisterType&gt;<wbr><wbr>(Func<wbr>&lt;<wbr>Tiny<wbr>Io<wbr>C<wbr>Container, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>RegisterType&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/704FA5D5">Register<wbr>&lt;RegisterType&gt;<wbr><wbr>(Func<wbr>&lt;<wbr>Tiny<wbr>Io<wbr>C<wbr>Container, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>RegisterType&gt;<wbr>, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/2974AD40">RegisterMultiple<wbr>&lt;RegisterType&gt;<wbr><wbr>(IEnumerable<wbr>&lt;Type&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/2824E62E">RegisterMultiple<wbr>(Type, <wbr>IEnumerable<wbr>&lt;Type&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/10C060E2">Resolve<wbr>(Type)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/36501128">Resolve<wbr>(Type, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/F33EADAE">Resolve<wbr>(Type, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/CFB8E518">Resolve<wbr>(Type, <wbr>string, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/CC630E44">Resolve<wbr>(Type, <wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/CBC078A0">Resolve<wbr>(Type, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/BE3125BA">Resolve<wbr>(Type, <wbr>string, <wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/B3A83521">Resolve<wbr>(Type, <wbr>string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/1A17ACE7">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/4DF5EAE5">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/74BFE165">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/FBC6ABEC">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/65B45A1F">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(<wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/F1C196AA">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(<wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/E97615EA">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>Named<wbr>Parameter<wbr>Overloads)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/6B6749C6">Resolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/FC8715A6">ResolveAll<wbr>(Type, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/6B9AC1B6">ResolveAll<wbr>(Type)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/DAB44D84">ResolveAll<wbr>&lt;ResolveType&gt;<wbr><wbr>(bool)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/56D88078">ResolveAll<wbr>&lt;ResolveType&gt;<wbr><wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/4FE87971">TryResolve<wbr>(Type, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/78830BC4">TryResolve<wbr>(Type, <wbr>ResolveOptions, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/054D6067">TryResolve<wbr>(Type, <wbr>string, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/5B0EBC56">TryResolve<wbr>(Type, <wbr>string, <wbr>ResolveOptions, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/E2412890">TryResolve<wbr>(Type, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/E9A91656">TryResolve<wbr>(Type, <wbr>string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/1C06EBE9">TryResolve<wbr>(Type, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/7D2E295B">TryResolve<wbr>(Type, <wbr>string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions, <wbr>object)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/D53313DC">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/FE767AC3">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(ResolveOptions, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/7359AC6B">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/C054E0FF">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>ResolveOptions, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/533B87D4">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(<wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/9CAB27B1">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/E68EFC46">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(<wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/CABF6DE4">TryResolve<wbr>&lt;ResolveType&gt;<wbr><wbr>(string, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>ResolveOptions, <wbr>ResolveType)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/64F56C68">Unregister<wbr>&lt;RegisterType&gt;<wbr><wbr>()<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/E69DBA6F">Unregister<wbr>&lt;RegisterType&gt;<wbr><wbr>(string)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/7A01D81A">Unregister<wbr>(Type)<wbr></a></li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/4BAFD471">Unregister<wbr>(Type, <wbr>string)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Nancy.TinyIoc/TinyIoCContainer/908EC638">Current</a></li>
+
+
+                    </ul>
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+			<h3><a href="/api/Nancy.TinyIoc/TinyIoCContainer">TinyIoCContainer</a>.</h3>
+	<h1>Register<wbr>(Type, <wbr>Func<wbr>&lt;<wbr>Tiny<wbr>Io<wbr>C<wbr>Container, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>object&gt;<wbr>, <wbr>string)<wbr> <small>Method</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+    Creates/replaces a container class registration with a user specified factory
+    </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Nancy.TinyIoc">Nancy<wbr>.TinyIoc</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Nancy.TinyIoc/TinyIoCContainer">TinyIoCContainer</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public TinyIoCContainer.RegisterOptions Register(Type registerType, Func&lt;TinyIoCContainer, NamedParameterOverloads, object&gt; factory, string name)</code></pre>
+
+
+
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>registerType</td>
+						<td>Type</td>
+						<td>Type to register</td>
+					</tr>
+					<tr>
+						<td>factory</td>
+						<td>Func<wbr>&lt;<wbr>Tiny<wbr>Io<wbr>C<wbr>Container, <wbr>Named<wbr>Parameter<wbr>Overloads, <wbr>object&gt;<wbr></td>
+						<td>Factory/lambda that returns an instance of RegisterType</td>
+					</tr>
+					<tr>
+						<td>name</td>
+						<td>string</td>
+						<td>Name of registation</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td><a href="/api/Nancy.TinyIoc/RegisterOptions">TinyIoCContainer<wbr>.RegisterOptions</a></td>
+					<td>RegisterOptions for fluent API</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

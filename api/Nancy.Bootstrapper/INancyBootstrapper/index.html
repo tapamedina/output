@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>My Docs - API - INancyBootstrapper Interface</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>My Docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">                    
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Namespace</li>
+		<li><a href="/api/Nancy.Bootstrapper">Nancy<wbr>.Bootstrapper</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Nancy.Bootstrapper/BootstrapperException">Bootstrapper<wbr>Exception</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/CollectionTypeRegistration">Collection<wbr>Type<wbr>Registration</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/ContainerRegistration">Container<wbr>Registration</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/FavIconApplicationStartup">Fav<wbr>Icon<wbr>Application<wbr>Startup</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/InstanceRegistration">InstanceRegistration</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/ModuleRegistration">ModuleRegistration</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/MultipleRootPathProvidersLocatedException">Multiple<wbr>Root<wbr>Path<wbr>Providers<wbr>Located<wbr>Exception</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/NancyBootstrapperBase_1">Nancy<wbr>Bootstrapper<wbr>Base<wbr>&lt;TContainer&gt;<wbr></a></li>
+				<li><a href="/api/Nancy.Bootstrapper/NancyBootstrapperLocator">Nancy<wbr>Bootstrapper<wbr>Locator</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/NancyBootstrapperWithRequestContainerBase_1">Nancy<wbr>Bootstrapper<wbr>With<wbr>Request<wbr>Container<wbr>Base<wbr>&lt;TContainer&gt;<wbr></a></li>
+				<li><a href="/api/Nancy.Bootstrapper/NancyInternalConfiguration">Nancy<wbr>Internal<wbr>Configuration</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/Pipelines">Pipelines</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/Registrations">Registrations</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/TypeRegistration">TypeRegistration</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/api/Nancy.Bootstrapper/Lifetime">Lifetime</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Nancy.Bootstrapper/IApplicationStartup">IApplicationStartup</a></li>
+				<li class="selected"><a href="/api/Nancy.Bootstrapper/INancyBootstrapper">INancyBootstrapper</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/IPipelines">IPipelines</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/IRegistrations">IRegistrations</a></li>
+				<li><a href="/api/Nancy.Bootstrapper/IRequestStartup">IRequestStartup</a></li>
+
+
+                    </ul>
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>INancyBootstrapper <small>Interface</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+    Bootstrapper for the Nancy Engine
+    </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Nancy.Bootstrapper">Nancy<wbr>.Bootstrapper</a></dd>
+											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>IDisposable</li>								
+									</ul>
+								</dd>
+							
+							
+							
+								<dt>Implementing Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Nancy.Demo.Razor.Localization/DemoBootstrapper">DemoBootstrapper</a></li>								
+											<li><a href="/api/Nancy/DefaultNancyBootstrapper">Default<wbr>Nancy<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Caching/CachingBootstrapper">CachingBootstrapper</a></li>								
+											<li><a href="/api/Nancy.Bootstrapper/NancyBootstrapperWithRequestContainerBase_1">Nancy<wbr>Bootstrapper<wbr>With<wbr>Request<wbr>Container<wbr>Base<wbr>&lt;TContainer&gt;<wbr></a></li>								
+											<li><a href="/api/Nancy.Demo.Authentication/AuthenticationBootstrapper">Authentication<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Hosting.Kestrel/DemoBootstrapper">DemoBootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.CustomModule/DemoBootstrapper">DemoBootstrapper</a></li>								
+											<li><a href="/api/Nancy.Hosting.Aspnet/DefaultNancyAspNetBootstrapper">Default<wbr>Nancy<wbr>Asp<wbr>Net<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.AspNetBootstrapperDemo/Bootstrapper">Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Validation/ValidationBootstrapper">Validation<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.ModelBinding/ModelBindingBootstrapper">Model<wbr>Binding<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Hosting.Self/DemoBootstrapper">DemoBootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Authentication.Forms/FormsAuthBootstrapper">Forms<wbr>Auth<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Authentication.Forms.TestingDemo/TestBootstrapper">TestBootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Authentication.Basic/AuthenticationBootstrapper">Authentication<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Authentication.Stateless/StatelessAuthBootstrapper">Stateless<wbr>Auth<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Testing/ConfigurableBootstrapper">Configurable<wbr>Bootstrapper</a></li>								
+											<li><a href="/api/Nancy.Demo.Hosting.Aspnet/DemoBootstrapper">DemoBootstrapper</a></li>								
+											<li><a href="/api/Nancy.Bootstrapper/NancyBootstrapperBase_1">Nancy<wbr>Bootstrapper<wbr>Base<wbr>&lt;TContainer&gt;<wbr></a></li>								
+									</ul>
+								</dd>				
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Interface0["IDisposable"]-.-&gt;Type
+	Type["INancyBootstrapper"]
+class Type type-node
+	Type-.-&gt;Implementing0["DemoBootstrapper"]
+	click Implementing0 "/api/Nancy.Demo.Razor.Localization/DemoBootstrapper"
+	Type-.-&gt;Implementing1["DefaultNancyBootstrapper"]
+	click Implementing1 "/api/Nancy/DefaultNancyBootstrapper"
+	Type-.-&gt;Implementing2["CachingBootstrapper"]
+	click Implementing2 "/api/Nancy.Demo.Caching/CachingBootstrapper"
+	Type-.-&gt;Implementing3["NancyBootstrapperWithRequestContainerBase&lt;TContainer&gt;"]
+	click Implementing3 "/api/Nancy.Bootstrapper/NancyBootstrapperWithRequestContainerBase_1"
+	Type-.-&gt;Implementing4["AuthenticationBootstrapper"]
+	click Implementing4 "/api/Nancy.Demo.Authentication/AuthenticationBootstrapper"
+	Type-.-&gt;Implementing5["DemoBootstrapper"]
+	click Implementing5 "/api/Nancy.Demo.Hosting.Kestrel/DemoBootstrapper"
+	Type-.-&gt;Implementing6["DemoBootstrapper"]
+	click Implementing6 "/api/Nancy.Demo.CustomModule/DemoBootstrapper"
+	Type-.-&gt;Implementing7["DefaultNancyAspNetBootstrapper"]
+	click Implementing7 "/api/Nancy.Hosting.Aspnet/DefaultNancyAspNetBootstrapper"
+	Type-.-&gt;Implementing8["Bootstrapper"]
+	click Implementing8 "/api/Nancy.AspNetBootstrapperDemo/Bootstrapper"
+	Type-.-&gt;Implementing9["ValidationBootstrapper"]
+	click Implementing9 "/api/Nancy.Demo.Validation/ValidationBootstrapper"
+	Type-.-&gt;Implementing10["ModelBindingBootstrapper"]
+	click Implementing10 "/api/Nancy.Demo.ModelBinding/ModelBindingBootstrapper"
+	Type-.-&gt;Implementing11["DemoBootstrapper"]
+	click Implementing11 "/api/Nancy.Demo.Hosting.Self/DemoBootstrapper"
+	Type-.-&gt;Implementing12["FormsAuthBootstrapper"]
+	click Implementing12 "/api/Nancy.Demo.Authentication.Forms/FormsAuthBootstrapper"
+	Type-.-&gt;Implementing13["TestBootstrapper"]
+	click Implementing13 "/api/Nancy.Demo.Authentication.Forms.TestingDemo/TestBootstrapper"
+	Type-.-&gt;Implementing14["AuthenticationBootstrapper"]
+	click Implementing14 "/api/Nancy.Demo.Authentication.Basic/AuthenticationBootstrapper"
+	Type-.-&gt;Implementing15["StatelessAuthBootstrapper"]
+	click Implementing15 "/api/Nancy.Demo.Authentication.Stateless/StatelessAuthBootstrapper"
+	Type-.-&gt;Implementing16["ConfigurableBootstrapper"]
+	click Implementing16 "/api/Nancy.Testing/ConfigurableBootstrapper"
+	Type-.-&gt;Implementing17["DemoBootstrapper"]
+	click Implementing17 "/api/Nancy.Demo.Hosting.Aspnet/DemoBootstrapper"
+	Type-.-&gt;Implementing18["NancyBootstrapperBase&lt;TContainer&gt;"]
+	click Implementing18 "/api/Nancy.Bootstrapper/NancyBootstrapperBase_1"
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public interface INancyBootstrapper : IDisposable</code></pre>
+
+
+
+
+
+
+
+
+
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Nancy.Bootstrapper/INancyBootstrapper/15A5E42C">GetEngine<wbr>()<wbr></a></td>
+								<td><a href="/api/Nancy/INancyEngine">INancyEngine</a></td>
+								<td>
+									<div>
+    Gets the configured <code class="cs"><a href="/api/Nancy/INancyEngine">INancyEngine</a></code>.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Bootstrapper/INancyBootstrapper/D18A5734">GetEnvironment<wbr>()<wbr></a></td>
+								<td><a href="/api/Nancy.Configuration/INancyEnvironment">INancyEnvironment</a></td>
+								<td>
+									<div>
+    Get the <code class="cs"><a href="/api/Nancy.Configuration/INancyEnvironment">INancyEnvironment</a></code> instance.
+    </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Bootstrapper/INancyBootstrapper/1EC8514B">Initialise<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Initialise the bootstrapper.
+    </div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Nancy.ViewEngines/Extensions/5733954F">IsAnonymousType<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Checks if the evaluated instance is an anonymous
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ViewEngines/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Extensions/ObjectExtensions/9E545AB9">ToDynamic<wbr>()<wbr></a></td>
+								<td>dynamic</td>
+								<td>
+									<div>
+    Convert an object to a dynamic type
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Extensions/ObjectExtensions">ObjectExtensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

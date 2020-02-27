@@ -1,0 +1,1465 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>My Docs - API - SecureModule Class</title>
+        <link href="/assets/css/mermaid.css" rel="stylesheet">
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+                            <span>My Docs</span>
+                </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/about">About This Project</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="active"><a href="/api">API</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Constructors">Constructors</a></p>
+<p><a href="#Properties">Properties</a></p>
+<p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">                    
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Namespace</li>
+		<li><a href="/api/Nancy.Demo.Authentication">Nancy<wbr>.Demo<wbr>.Authentication</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Nancy.Demo.Authentication/AnotherVerySecureModule">Another<wbr>Very<wbr>Secure<wbr>Module</a></li>
+				<li><a href="/api/Nancy.Demo.Authentication/AuthenticationBootstrapper">Authentication<wbr>Bootstrapper</a></li>
+				<li><a href="/api/Nancy.Demo.Authentication/MainModule">MainModule</a></li>
+				<li class="selected"><a href="/api/Nancy.Demo.Authentication/SecureModule">SecureModule</a></li>
+
+
+                    </ul>
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>SecureModule <small>Class</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Nancy.Demo.Authentication">Nancy<wbr>.Demo<wbr>.Authentication</a></dd>
+											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Nancy/INancyModule">INancyModule</a></li>								
+											<li><a href="/api/Nancy/IHideObjectMembers">IHideObjectMembers</a></li>								
+									</ul>
+								</dd>
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>object</li>								
+											<li><a href="/api/Nancy/NancyModule">NancyModule</a></li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Base0["NancyModule"]--&gt;Type
+	click Base0 "/api/Nancy/NancyModule"
+	Base1["object"]--&gt;Base0
+	Interface0["INancyModule"]-.-&gt;Type
+	click Interface0 "/api/Nancy/INancyModule"
+	Interface1["IHideObjectMembers"]-.-&gt;Type
+	click Interface1 "/api/Nancy/IHideObjectMembers"
+	Type["SecureModule"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public class SecureModule : NancyModule, INancyModule, IHideObjectMembers</code></pre>
+
+
+
+
+
+
+			<h1 id="Constructors">Constructors</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Nancy.Demo.Authentication/SecureModule/FFA6C829">SecureModule<wbr>()<wbr></a></td>
+									<td></td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+			<h1 id="Properties">Properties</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Nancy/NancyModule/FEA35BE4">After</a></td>
+								<td><a href="/api/Nancy/AfterPipeline">AfterPipeline</a></td>
+								<td>
+									<div><p>
+    The post-request hook
+    </p><p>
+    The post-request hook is called after the response is created by the route execution.
+    It can be used to rewrite the response or add/remove items from the context.
+    </p>
+    <remarks>This is automatically set by Nancy at runtime.</remarks>
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/5EEC8883">Before</a></td>
+								<td><a href="/api/Nancy/BeforePipeline">BeforePipeline</a></td>
+								<td>
+									<div>
+    <p>
+    The pre-request hook
+    </p>
+    <p>
+    The PreRequest hook is called prior to executing a route. If any item in the
+    pre-request pipeline returns a response then the route is not executed and the
+    response is returned.
+    </p>
+    <remarks>This is automatically set by Nancy at runtime.</remarks>
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/D3C4BB5F">Context</a></td>
+								<td><a href="/api/Nancy/NancyContext">NancyContext</a></td>
+								<td>
+									<div>
+    Gets or sets the current Nancy context
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/418921D1">ModelBinderLocator</a></td>
+								<td><a href="/api/Nancy.ModelBinding/IModelBinderLocator">IModelBinderLocator</a></td>
+								<td>
+									<div>
+    Gets or sets the model binder locator
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/BA856799">Model<wbr>Validation<wbr>Result</a></td>
+								<td><a href="/api/Nancy.Validation/ModelValidationResult">Model<wbr>Validation<wbr>Result</a></td>
+								<td>
+									<div>
+    Gets or sets the model validation result
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/B8C3D57B">ModulePath</a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Get the root path of the routes in the current module.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/53578032">Negotiate</a></td>
+								<td><a href="/api/Nancy.Responses.Negotiation/Negotiator">Negotiator</a></td>
+								<td>
+									<div>
+    Used to negotiate the content returned based on Accepts header.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/9DA8B435">OnError</a></td>
+								<td><a href="/api/Nancy/ErrorPipeline">ErrorPipeline</a></td>
+								<td>
+									<div>
+    <p>
+    The error hook
+    </p>
+    <p>
+    The error hook is called if an exception is thrown at any time during executing
+    the PreRequest hook, a route and the PostRequest hook. It can be used to set
+    the response and/or finish any ongoing tasks (close database session, etc).
+    </p>
+    <remarks>This is automatically set by Nancy at runtime.</remarks>
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/32CE7186">Request</a></td>
+								<td><a href="/api/Nancy/Request">Request</a></td>
+								<td>
+									<div>
+    Gets or sets an <code class="cs"><a href="/api/Nancy/NancyModule/32CE7186">Request</a></code> instance that represents the current request.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/EF32A196">Response</a></td>
+								<td><a href="/api/Nancy/IResponseFormatter">IResponseFormatter</a></td>
+								<td>
+									<div>
+    An extension point for adding support for formatting response contents.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/43736669">Routes</a></td>
+								<td>IEnumerable<wbr>&lt;Route&gt;<wbr></td>
+								<td>
+									<div>
+    Gets all declared routes by the module.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/7994A26D">Session</a></td>
+								<td><a href="/api/Nancy.Session/ISession">ISession</a></td>
+								<td>
+									<div>
+    Gets the current session.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/D2F382F9">Text</a></td>
+								<td>dynamic</td>
+								<td>
+									<div>
+    Dynamic access to text resources.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/278EAB82">ValidatorLocator</a></td>
+								<td><a href="/api/Nancy.Validation/IModelValidatorLocator">I<wbr>Model<wbr>Validator<wbr>Locator</a></td>
+								<td>
+									<div>
+    Gets or sets the validator locator.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/9BFFF43C">View</a></td>
+								<td><a href="/api/Nancy/ViewRenderer">ViewRenderer</a></td>
+								<td>
+									<div>
+    Renders a view from inside a route handler.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/FBB2DDFB">ViewBag</a></td>
+								<td>dynamic</td>
+								<td>
+									<div>
+    Non-model specific data for rendering in the response
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/EB1FC93A">ViewFactory</a></td>
+								<td><a href="/api/Nancy.ViewEngines/IViewFactory">IViewFactory</a></td>
+								<td>
+									<div>
+    The extension point for accessing the view engines in Nancy.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Nancy/NancyModule/FA69D3D4">AddRoute<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for the module
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/6C52578E">Delete<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for DELETE requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/9F906371">Delete<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for DELETE requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/8D5F39F7">Delete<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for DELETE requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/9B7F3B35">Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for DELETE requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/4F8B856C">Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for DELETE requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/8D7FF4EC">Delete<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for DELETE requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/7E1796E9">Get<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for GET requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/AEA13990">Get<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for GET requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/C0C1D9F5">Get<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for GET requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/E190BC65">Get<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for GET requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/6E0FC2CE">Get<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for GET requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/5C1E163D">Get<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for GET requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/B637A965">Head<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for HEAD requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/0F1FF8CA">Head<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for HEAD requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/E0D9A32E">Head<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for HEAD requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/670C3D39">Head<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for HEAD requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/D3BCE721">Head<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for HEAD requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/9D182DC8">Head<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for HEAD requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/D206905A">Options<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for OPTIONS requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/6657B209">Options<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for OPTIONS requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/934188FA">Options<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for OPTIONS requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/EEA4BAE4">Options<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for OPTIONS requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/3D9B86EE">Options<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for OPTIONS requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/271D26E3">Options<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for OPTIONS requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/DC8287B4">Patch<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PATCH requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/A6920449">Patch<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PATCH requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/335590D5">Patch<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PATCH requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/D91EC09A">Patch<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PATCH requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/12B86EE0">Patch<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PATCH requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/A7E21475">Patch<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PATCH requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/32EC5B16">Post<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for POST requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/25BC2C24">Post<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for POST requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/B04C920E">Post<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for POST requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/4F1226F2">Post<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for POST requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/811D8DF8">Post<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for POST requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/FAAB069C">Post<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for POST requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/47510E7C">Put<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PUT requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/D299C169">Put<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>object&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PUT requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/7F4C9B17">Put<wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;object&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PUT requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/C86FA22F">Put<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>CancellationToken, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PUT requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/A256446C">Put<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>T&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PUT requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy/NancyModule/464778CF">Put<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>Func<wbr>&lt;dynamic, <wbr>Task<wbr>&lt;T&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;NancyContext, <wbr>bool&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Declares a route for PUT requests.
+    </div>
+											<div><small><em>Inherited from <a href="/api/Nancy/NancyModule">NancyModule</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Nancy.Extensions/ModuleExtensions/B2DA3A04">Add<wbr>Before<wbr>Hook<wbr>Or<wbr>Execute<wbr>(Func<wbr>&lt;NancyContext, <wbr>Response&gt;<wbr>, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Adds the before delegate to the Before pipeline if the module is not currently executing,
+    or executes the delegate directly and returns any response returned if it is.
+    Uses <code class="cs"><a href="/api/Nancy.ErrorHandling/RouteExecutionEarlyExitException">RouteExecutionEarlyExitException</a></code>
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Extensions/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/00F65921">Bind<wbr>(BindingConfig, <wbr>string[])<wbr></a></td>
+								<td>dynamic</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/C8984D29">Bind<wbr>(string[])<wbr></a></td>
+								<td>dynamic</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/B03ECE10">Bind<wbr>&lt;TModel&gt;<wbr><wbr>()<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/156179A7">Bind<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/FA488487">Bind<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/A5525FCD">Bind<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/833D5DC8">Bind<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig, <wbr>string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/23BABCF4">Bind<wbr>&lt;TModel&gt;<wbr><wbr>(Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/459EDFB4">Bind<wbr>&lt;TModel&gt;<wbr><wbr>(string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/14591CC6">BindAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>()<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/D72C8EA9">BindAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/46FAEAE6">BindAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/48F0BCFD">BindAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(BindingConfig, <wbr>string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/36E4AD6F">BindAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/DB2300BE">BindAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to a model and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/5CF284D9">BindTo<wbr>&lt;TModel&gt;<wbr><wbr>(TModel)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/12081E94">BindTo<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>BindingConfig)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/2EBC6937">BindTo<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>BindingConfig, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/72334B52">BindTo<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>BindingConfig, <wbr>string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/0F183A8F">BindTo<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/E29C34BE">BindTo<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/F3BE4AE8">BindToAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(TModel)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/1E37C462">BindToAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>BindingConfig)<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/4AF0F36A">BindToAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>BindingConfig, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/5CFA72A1">BindToAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>BindingConfig, <wbr>string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/C44F7D9C">BindToAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>Expression<wbr>&lt;Func<wbr>&lt;TModel, <wbr>object&gt;<wbr>&gt;<wbr>[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ModelBinding/ModuleExtensions/F1C6AC27">BindToAndValidate<wbr>&lt;TModel&gt;<wbr><wbr>(TModel, <wbr>string[])<wbr></a></td>
+								<td>TModel</td>
+								<td>
+									<div>
+    Bind the incoming request to an existing instance and validate
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ModelBinding/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/Csrf/F0B162C9">CreateNewCsrfToken<wbr>(<wbr>Cryptography<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Creates a new csrf token for this response with an optional salt.
+    Only necessary if a particular route requires a new token for each request.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/Csrf">Csrf</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Basic/BasicHttpExtensions/50BAACE9">Enable<wbr>Basic<wbr>Authentication<wbr>(<wbr>Basic<wbr>Authentication<wbr>Configuration)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Module requires basic authentication
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Basic/BasicHttpExtensions">BasicHttpExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Extensions/ModuleExtensions/3FC3551A">GetModuleName<wbr>()<wbr></a></td>
+								<td>string</td>
+								<td>
+									<div>
+    Extracts the friendly name of a Nancy module given its type.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Extensions/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.ViewEngines/Extensions/5733954F">IsAnonymousType<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Checks if the evaluated instance is an anonymous
+    </div>
+										<div><small><em>From <a href="/api/Nancy.ViewEngines/Extensions">Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Forms/ModuleExtensions/C13D81A4">Login<wbr>(Guid, <wbr>DateTime?, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Nancy/Response">Response</a></td>
+								<td>
+									<div>
+    Logs the user in and returns either an empty 200 response for ajax requests, or a redirect response for non-ajax. 
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Forms/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Forms/ModuleExtensions/A11A25C0">LoginAndRedirect<wbr>(Guid, <wbr>DateTime?, <wbr>string)<wbr></a></td>
+								<td><a href="/api/Nancy/Response">Response</a></td>
+								<td>
+									<div>
+    Logs the user in with the given user guid and redirects.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Forms/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Forms/ModuleExtensions/9F8D1040">LoginWithoutRedirect<wbr>(Guid, <wbr>DateTime?)<wbr></a></td>
+								<td><a href="/api/Nancy/Response">Response</a></td>
+								<td>
+									<div>
+    Logs the user in with the given user guid and returns ok response.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Forms/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Forms/ModuleExtensions/7AEF8DE2">Logout<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Nancy/Response">Response</a></td>
+								<td>
+									<div>
+    Logs the user out and returns either an empty 200 response for ajax requests, or a redirect response for non-ajax. 
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Forms/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Forms/ModuleExtensions/A8D292AD">LogoutAndRedirect<wbr>(string)<wbr></a></td>
+								<td><a href="/api/Nancy/Response">Response</a></td>
+								<td>
+									<div>
+    Logs the user out and redirects
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Forms/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Authentication.Forms/ModuleExtensions/4EFD153A">Logout<wbr>Without<wbr>Redirect<wbr>()<wbr></a></td>
+								<td><a href="/api/Nancy/Response">Response</a></td>
+								<td>
+									<div>
+    Logs the user out without a redirect
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Authentication.Forms/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/6B85B6E1">RequiresAnyClaim<wbr>(Predicate<wbr>&lt;Claim&gt;<wbr>[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires authentication and any one of certain claims to be present.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/82219F01">RequiresAnyRole<wbr>(string[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires authentication and any one of certain roles to be present.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/AAB5D70E">Requires<wbr>Authentication<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires authentication
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/AB3D0221">RequiresClaims<wbr>(Predicate<wbr>&lt;Claim&gt;<wbr>[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires authentication and certain claims to be present.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/EC4FC7A8">RequiresHttps<wbr>()<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires https.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/70D38416">RequiresHttps<wbr>(bool)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires https.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/D8F437C3">RequiresHttps<wbr>(bool, <wbr>int)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires https.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/ModuleSecurity/7FDA5DA6">RequiresRoles<wbr>(string[])<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    This module requires authentication and certain roles to be present.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/ModuleSecurity">ModuleSecurity</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Extensions/ModuleExtensions/7678797B">RouteExecuting<wbr>()<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div>
+    Returns a boolean indicating whether the route is executing, or whether the module is
+    being constructed.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Extensions/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Extensions/ObjectExtensions/9E545AB9">ToDynamic<wbr>()<wbr></a></td>
+								<td>dynamic</td>
+								<td>
+									<div>
+    Convert an object to a dynamic type
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Extensions/ObjectExtensions">ObjectExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Validation/ModuleExtensions/0280A636">Validate<wbr>&lt;T&gt;<wbr><wbr>(T)<wbr></a></td>
+								<td><a href="/api/Nancy.Validation/ModelValidationResult">Model<wbr>Validation<wbr>Result</a></td>
+								<td>
+									<div>
+    Performs validation on the specified <span name="instance" class="paramref">instance</span>.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Validation/ModuleExtensions">ModuleExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Nancy.Security/Csrf/1E3E954C">ValidateCsrfToken<wbr>(TimeSpan?)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Validate that the incoming request has valid CSRF tokens.
+    Throws <code class="cs"><a href="/api/Nancy.Security/CsrfValidationException">CsrfValidationException</a></code> if validation fails.
+    </div>
+										<div><small><em>From <a href="/api/Nancy.Security/Csrf">Csrf</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).load(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        htmlLabels: false,
+                        useMaxWidth:false
+                    }
+                });  
+                mermaid.init(undefined, ".mermaid")
+                $('svg').addClass('img-responsive');
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>
